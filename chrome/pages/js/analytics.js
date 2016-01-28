@@ -38,16 +38,16 @@ var unblock_youku = unblock_youku || {};
 
 
 function ga_collect_data(type, data) {
-    "use strict";
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://www.google-analytics.com/collect', true);
-    var payload = 'v=1&' 
-                + 'tid=UA-30726750-8&'
-                + 'cid='+ unblock_youku.uuid + '&' 
-                + 'aip=1&'  // anonymize IP
-                + 't=' + type + '&'
-                + data;
-    xhr.send(payload);
+    // "use strict";
+    // var xhr = new XMLHttpRequest();
+    // xhr.open('POST', 'https://www.google-analytics.com/collect', true);
+    // var payload = 'v=1&' 
+                // + 'tid=UA-30726750-8&'
+                // + 'cid='+ unblock_youku.uuid + '&' 
+                // + 'aip=1&'  // anonymize IP
+                // + 't=' + type + '&'
+                // + data;
+    // xhr.send(payload);
 }
 
 
