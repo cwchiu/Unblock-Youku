@@ -68,6 +68,11 @@ console.log('ip addr: ' + unblock_youku.ip_addr);
 
 
 // ====== Configuration Functions ======
+/**
+ * 設定運行模式
+ *
+ * @param mode_name string 
+ */
 function set_mode_name(mode_name, callback) {
     if (typeof callback === 'undefined') {
         var err_msg = 'missing callback function in set_mode_name()';
@@ -82,6 +87,11 @@ function set_mode_name(mode_name, callback) {
     }
 }
 
+/**
+ * 取得運行模式
+ *
+ * @param callback function( string)
+ */
 function get_mode_name(callback) {
     if (typeof callback === 'undefined') {
         var err_msg = 'missing callback function in get_mode_name()';
@@ -130,6 +140,11 @@ function clear_mode_settings(mode_name) {
     console.log('cleared the settings for the mode: ' + mode_name);
 }
 
+/**
+ * 依據模式配置
+ *
+ *
+ */ 
 function setup_mode_settings(mode_name) {
     switch (mode_name) {
     case 'lite':
@@ -234,7 +249,7 @@ function storage_monitor(changes, area) {
         if (typeof mode_change.oldValue !== 'undefined' && typeof mode_change.newValue !== 'undefined') {
             clear_mode_settings(mode_change.oldValue);
             setup_mode_settings(mode_change.newValue);
-            ga_report_event('Change Mode', mode_change.oldValue + ' -> ' + mode_change.newValue);
+            //ga_report_event('Change Mode', mode_change.oldValue + ' -> ' + mode_change.newValue);
         }
     }
 
